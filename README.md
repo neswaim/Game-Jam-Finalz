@@ -23,7 +23,7 @@ Enemy pathing directly towards player rather than linear path, digable graves ra
 # Created by: BleNder DoughNut
 Nevaeh Swaim
 
-Map design, assisted with enemy script and pathing, created collisions on map, assisted with player script, found kenney resources.
+Map design, assisted with enemy script and pathing, created collisions on map, assisted with player script, found kenney resources, and added win condition and end screen.
 
 Nicholas Wrightsman
 
