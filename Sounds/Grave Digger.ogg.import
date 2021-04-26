@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Grave Digger.ogg-c784aa3df13270e918a5999560c0e73b.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Grave Digger.ogg"
+dest_files=[ "res://.import/Grave Digger.ogg-c784aa3df13270e918a5999560c0e73b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

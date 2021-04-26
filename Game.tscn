@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/borderPillar.glb" type="PackedScene" id=2]
@@ -49,6 +49,8 @@
 [ext_resource path="res://Sounds/coin2.wav" type="AudioStream" id=47]
 [ext_resource path="res://GoldBar/GoldBar.tscn" type="PackedScene" id=48]
 [ext_resource path="res://Enemy/zambie.gd" type="Script" id=49]
+[ext_resource path="res://Sounds/Grave Digger.ogg" type="AudioStream" id=50]
+[ext_resource path="res://Ambient/WorldEnvironment.tscn" type="PackedScene" id=51]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 2.49044, 4.86868 )
@@ -56,24 +58,24 @@ extents = Vector3( 1, 2.49044, 4.86868 )
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 1.4, 0.5, 0.5 )
 
-[sub_resource type="BoxShape" id=12]
+[sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.1, 0.2, 1.5 )
 
-[sub_resource type="CapsuleShape" id=3]
+[sub_resource type="CapsuleShape" id=4]
 radius = 0.5
 height = 1.5
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.5, 0.1, 0.5 )
 
-[sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.352941, 0.482353, 0.380392, 1 )
-
 [sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.352941, 0.482353, 0.380392, 1 )
 
 [sub_resource type="SpatialMaterial" id=7]
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="SpatialMaterial" id=8]
+
+[sub_resource type="DynamicFont" id=9]
 size = 60
 outline_size = 2
 outline_color = Color( 0.0509804, 0.384314, 0.0627451, 1 )
@@ -83,10 +85,10 @@ extra_spacing_char = 3
 extra_spacing_space = 3
 font_data = ExtResource( 41 )
 
-[sub_resource type="Curve3D" id=11]
+[sub_resource type="Curve3D" id=10]
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -7.35944, -0.0271435, -34.0166, 0, 0, 0, 0, 0, 0, -6.79223, -0.0262232, -32.8657, 0, 0, 0, 0, 0, 0, -6.29213, -0.0276566, -31.1104, 0, 0, 0, 0, 0, 0, -5.98382, -0.0284214, -30.1796, 0, 0, 0, 0, 0, 0, -5.69241, -0.0293446, -29.0455, 0, 0, 0, 0, 0, 0, -5.34893, -0.030077, -28.1589, 0, 0, 0, 0, 0, 0, -4.90952, -0.0314789, -26.4379, 0, 0, 0, 0, 0, 0, -4.79395, -0.0325603, -25.0823, 0, 0, 0, 0, 0, 0, -5.02688, -0.0337048, -23.6061, 0, 0, 0, 0, 0, 0, -5.24154, -0.0349789, -21.971, 0, 0, 0, 0, 0, 0, -5.27578, -0.0361233, -20.5176, 0, 0, 0, 0, 0, 0, -5.0104, -0.0371418, -19.2597, 0, 0, 0, 0, 0, 0, -4.42049, -0.0361786, -17.9402, 0, 0, 0, 0, 0, 0, -3.93285, -0.0353489, -16.7723, 0, 0, 0, 0, 0, 0, -3.45576, -0.0347748, -16.1815, 0, 0, 0, 0, 0, 0, -2.02822, -0.0334034, -15.2195, 0, 0, 0, 0, 0, 0, -0.871352, -0.0325756, -15.0964, 0, 0, 0, 0, 0, 0, 0.319214, -0.0317135, -14.9516 ),
-"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -7.35944, -0.0271435, -34.0166, 0, 0, 0, 0, 0, 0, -6.79223, -0.0262232, -32.8657, 0, 0, 0, 0, 0, 0, -6.29213, -0.0276566, -31.1104, 0, 0, 0, 0, 0, 0, -5.98382, -0.0284214, -30.1796, 0, 0, 0, 0, 0, 0, -5.69241, -0.0293446, -29.0455, 0, 0, 0, 0, 0, 0, -5.34893, -0.030077, -28.1589, 0, 0, 0, 0, 0, 0, -4.90952, -0.0314789, -26.4379, 0, 0, 0, 0, 0, 0, -4.79395, -0.0325603, -25.0823, 0, 0, 0, 0, 0, 0, -5.02688, -0.0337048, -23.6061, 0, 0, 0, 0, 0, 0, -5.24154, -0.0349789, -21.971, 0, 0, 0, 0, 0, 0, -5.27578, -0.0361233, -20.5176, 0, 0, 0, 0, 0, 0, -5.0104, -0.0371418, -19.2597, 0, 0, 0, 0, 0, 0, -4.42049, -0.0361786, -17.9402, 0, 0, 0, 0, 0, 0, -3.93285, -0.0353489, -16.7723, 0, 0, 0, 0, 0, 0, -3.45576, -0.0347748, -16.1815, 0, 0, 0, 0, 0, 0, -2.02822, -0.0334034, -15.2195, 0, 0, 0, 0, 0, 0, -0.871352, -0.0325756, -15.0964, 0, 0, 0, 0, 0, 0, 0.319214, -0.0317135, -14.9516, 0, 0, 0, 0, 0, 0, 1.37595, -0.0589514, -14.8779, 0, 0, 0, 0, 0, 0, 2.55153, -0.0787373, -14.8289, 0, 0, 0, 0, 0, 0, 3.50861, -0.0721407, -14.8604, 0, 0, 0, 0, 0, 0, 4.34564, -0.0964851, -15.4461, 0, 0, 0, 0, 0, 0, 5.01997, -0.0858088, -16.0219, 0, 0, 0, 0, 0, 0, 5.97482, -0.0431051, -16.932, 0, 0, 0, 0, 0, 0, 6.83419, -0.000402451, -17.7658, 0, 0, 0, 0, 0, 0, 7.77116, 0.0529766, -18.6983, 0, 0, 0, 0, 0, 0, 8.30842, 0.159734, -19.4945, 0, 0, 0, 0, 0, 0, 8.83385, 0.330545, -20.5013, 0, 0, 0, 0, 0, 0, 8.96547, 0.522708, -21.2665, 0, 0, 0, 0, 0, 0, 9.00769, 0.76825, -22.1435, 0, 0, 0, 0, 0, 0, 9.15136, 1.02447, -23.1383, 0, 0, 0, 0, 0, 0, 9.6411, 1.25933, -24.3365, 0, 0, 0, 0, 0, 0, 9.90405, 1.47285, -25.28, 0, 0, 0, 0, 0, 0, 10.2505, 1.66501, -26.217, 0, 0, 0, 0, 0, 0, 10.7304, 1.65081, -26.6952, 0, 0, 0, 0, 0, 0, 11.6359, 1.54258, -27.1246, 0, 0, 0, 0, 0, 0, 12.3184, 1.44473, -27.2132, 0, 0, 0, 0, 0, 0, 13.7145, 1.282, -27.2039, 0, 0, 0, 0, 0, 0, 15.2816, 1.66508, -27.1822, 0, 0, 0, 0, 0, 0, -7.35944, -0.0271435, -34.0166 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
 }
 
 [node name="Game" type="Spatial"]
@@ -362,171 +364,171 @@ shape = SubResource( 2 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="StaticBody4" type="StaticBody" parent="Graveyard/Graves"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1019, 0, 1.51501 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody4"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody4"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody4"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody4"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="StaticBody5" type="StaticBody" parent="Graveyard/Graves"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4166, 0, -6.48036 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody5"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody5"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody5"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody5"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="StaticBody6" type="StaticBody" parent="Graveyard/Graves"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28452, 0, -6.92933 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody6"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody6"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody6"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody6"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="StaticBody7" type="StaticBody" parent="Graveyard/Graves"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128084, 0, -7.0463 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody7"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody7"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody7"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody7"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="StaticBody8" type="StaticBody" parent="Graveyard/Graves"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9804, 0, -7.40888 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody8"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody8"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody8"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody8"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="StaticBody9" type="StaticBody" parent="Graveyard/Graves"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3.70039, 0, -26.252 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody9"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody9"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody9"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody9"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="StaticBody3" type="StaticBody" parent="Graveyard/Graves"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11564, 0, 1.52081 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody3"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody3"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody3"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody3"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2" type="StaticBody" parent="Graveyard/Graves"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75164, 0, 0.313646 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody2"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody2"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody2"]
 transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody2"]
 transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="Map" type="Spatial" parent="Graveyard"]
 
@@ -1664,11 +1666,11 @@ script = ExtResource( 1 )
 
 [node name="Body" type="CollisionShape" parent="Player"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.3, 0 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Feet" type="CollisionShape" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Pivot" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
@@ -1687,11 +1689,11 @@ spot_angle = 37.9073
 
 [node name="Ground" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.745822, -0.71455, -25.1604 )
-material_override = SubResource( 5 )
+material_override = SubResource( 6 )
 use_collision = true
 width = 45.0
 depth = 45.0
-material = SubResource( 6 )
+material = SubResource( 7 )
 
 [node name="CSGBox" type="CSGBox" parent="Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03101, 1.09321, -1.07824 )
@@ -1761,7 +1763,7 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 14.2949
 polygon = PoolVector2Array( -11.858, -1.078, -3.743, 2.068, 6.449, 1.543, 16.521, 0.286 )
 depth = 9.345
 smooth_faces = true
-material = SubResource( 7 )
+material = SubResource( 8 )
 
 [node name="HUD" type="Control" parent="."]
 margin_left = 6.71751
@@ -1778,8 +1780,11 @@ margin_left = 4.94975
 margin_top = 3.53554
 margin_right = 150.95
 margin_bottom = 70.5355
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 9 )
 text = "Cash: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Emerald" parent="." instance=ExtResource( 43 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.45071, -0.570813, -19.337 )
@@ -1788,7 +1793,7 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.45071, -0.570813, -19.
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.61068, -0.58649, -18.7197 )
 
 [node name="Emerald3" parent="." instance=ExtResource( 43 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -11.2044, -0.626037, -38.2184 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -10.8991, -0.626037, -38.9057 )
 
 [node name="Emerald4" parent="." instance=ExtResource( 43 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -11.2044, -0.626037, -39.0183 )
@@ -1809,10 +1814,10 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.93337, -0.600474, -27
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.73962, -0.65801, -27.3444 )
 
 [node name="Ruby" parent="." instance=ExtResource( 45 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.52049, -0.58256, -18.1935 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.57, -0.58256, -20.0984 )
 
 [node name="Ruby5" parent="." instance=ExtResource( 45 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -13.0973, -0.660302, -24.7245 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -12.698, -0.677279, -26.3347 )
 
 [node name="Ruby2" parent="." instance=ExtResource( 45 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.4435, -0.58256, -26.9139 )
@@ -1821,7 +1826,7 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.4435, -0.58256, -26.9
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.2133, -0.58256, -26.9139 )
 
 [node name="Ruby4" parent="." instance=ExtResource( 45 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.80454, -0.58256, -25.3051 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.80454, -0.58256, -27.3138 )
 
 [node name="coin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 46 )
@@ -1833,11 +1838,18 @@ stream = ExtResource( 47 )
 transform = Transform( 0.978122, 0, -0.208031, 0, 1, 0, 0.208031, 0, 0.978122, -12.3879, -1.55754, -17.4077 )
 
 [node name="Path" type="Path" parent="."]
-curve = SubResource( 11 )
+curve = SubResource( 10 )
 
 [node name="PathFollow" type="PathFollow" parent="Path"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.10173, 0, -25.5065 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35944, -0.0271435, -34.0166 )
 
 [node name="zambie" parent="Path/PathFollow" instance=ExtResource( 27 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, -0.247201, 2.58942 )
 script = ExtResource( 49 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 50 )
+volume_db = -5.049
+autoplay = true
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 51 )]
