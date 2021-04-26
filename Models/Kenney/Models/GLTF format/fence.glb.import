@@ -16,10 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
-<<<<<<< HEAD
-=======
-nodes/use_legacy_names=false
->>>>>>> 2c8d22dea5b05a2225aa9676453c7a13bebabef0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true

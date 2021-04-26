@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/borderPillar.glb" type="PackedScene" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Models/Kenney/Models/GLTF format/graveBorder.glb" type="PackedScene" id=24]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/coffinOld.glb" type="PackedScene" id=25]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/zombie.glb" type="PackedScene" id=26]
+[ext_resource path="res://Enemy/zambie.glb" type="PackedScene" id=27]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/rocks.glb" type="PackedScene" id=28]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/debrisWood.glb" type="PackedScene" id=29]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/trunkLong.glb" type="PackedScene" id=30]
@@ -39,6 +40,14 @@
 [ext_resource path="res://Models/Kenney/Models/GLTF format/road.glb" type="PackedScene" id=38]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/trunk.glb" type="PackedScene" id=39]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/pine.glb" type="PackedScene" id=40]
+[ext_resource path="res://Fonts/a-anak-cute-font/AnakCute-513pv.ttf" type="DynamicFontData" id=41]
+[ext_resource path="res://HUD.gd" type="Script" id=42]
+[ext_resource path="res://Gems/Emerald.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Gems/Sapphire.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Gems/Ruby.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Sounds/coin.wav" type="AudioStream" id=46]
+[ext_resource path="res://Sounds/coin2.wav" type="AudioStream" id=47]
+[ext_resource path="res://GoldBar/GoldBar.tscn" type="PackedScene" id=48]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 2.49044, 4.86868 )
@@ -59,6 +68,62 @@ albedo_color = Color( 0.352941, 0.482353, 0.380392, 1 )
 [sub_resource type="SpatialMaterial" id=6]
 
 [sub_resource type="SpatialMaterial" id=7]
+
+[sub_resource type="VisualScriptFunction" id=8]
+resource_name = "new_function"
+
+[sub_resource type="VisualScript" id=9]
+data = {
+"base_type": "Spatial",
+"functions": [ {
+"data_connections": [  ],
+"function_id": -1,
+"name": "f_312843592",
+"nodes": [  ],
+"scroll": Vector2( 0, -217.75 ),
+"sequence_connections": [  ]
+}, {
+"data_connections": [  ],
+"function_id": 0,
+"name": "new_function",
+"nodes": [ 0, Vector2( 200, -60 ), SubResource( 8 ) ],
+"scroll": Vector2( -50, -100 ),
+"sequence_connections": [  ]
+} ],
+"is_tool_script": false,
+"signals": [ {
+"arguments": [  ],
+"name": "new_signal"
+} ],
+"variables": [ {
+"default_value": null,
+"export": false,
+"hint": 0,
+"hint_string": "",
+"name": "new_variable_2",
+"type": 0,
+"usage": 7
+}, {
+"default_value": null,
+"export": false,
+"hint": 0,
+"hint_string": "",
+"name": "new_variable",
+"type": 0,
+"usage": 7
+} ],
+"vs_unify": true
+}
+
+[sub_resource type="DynamicFont" id=10]
+size = 60
+outline_size = 2
+outline_color = Color( 0.0509804, 0.384314, 0.0627451, 1 )
+extra_spacing_top = 3
+extra_spacing_bottom = 3
+extra_spacing_char = 3
+extra_spacing_space = 3
+font_data = ExtResource( 41 )
 
 [node name="Game" type="Spatial"]
 
@@ -1561,3 +1626,82 @@ polygon = PoolVector2Array( -11.858, -1.078, -3.743, 2.068, 6.449, 1.543, 16.521
 depth = 9.345
 smooth_faces = true
 material = SubResource( 7 )
+
+[node name="zambie" parent="." instance=ExtResource( 27 )]
+transform = Transform( 0.120645, 0, 1.09738, 0, 1.061, 0, -0.909029, 0, 0.145642, 9.06, -0.647, -8.084 )
+script = SubResource( 9 )
+
+[node name="OmniLight" type="OmniLight" parent="zambie"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.43307, 0 )
+light_color = Color( 0.823529, 0.898039, 0.737255, 1 )
+light_energy = 7.44
+omni_range = 1.41443
+
+[node name="HUD" type="Control" parent="."]
+margin_left = 6.71751
+margin_top = 7.07107
+margin_right = 340.718
+margin_bottom = 80.0711
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cash" type="Label" parent="HUD"]
+margin_left = 4.94975
+margin_top = 3.53554
+margin_right = 150.95
+margin_bottom = 70.5355
+custom_fonts/font = SubResource( 10 )
+text = "Cash: "
+
+[node name="Emerald" parent="." instance=ExtResource( 43 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.45071, -0.570813, -19.337 )
+
+[node name="Emerald2" parent="." instance=ExtResource( 43 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.61068, -0.58649, -18.7197 )
+
+[node name="Emerald3" parent="." instance=ExtResource( 43 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -11.2044, -0.626037, -38.2184 )
+
+[node name="Emerald4" parent="." instance=ExtResource( 43 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -11.2044, -0.626037, -39.0183 )
+
+[node name="Sapphire" parent="." instance=ExtResource( 44 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.21463, -0.600474, -19.6136 )
+
+[node name="Sapphire2" parent="." instance=ExtResource( 44 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.335, -0.600474, -27.7005 )
+
+[node name="Sapphire5" parent="." instance=ExtResource( 44 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -13.4553, -0.600474, -26.3367 )
+
+[node name="Sapphire4" parent="." instance=ExtResource( 44 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.93337, -0.600474, -27.0995 )
+
+[node name="Sapphire3" parent="." instance=ExtResource( 44 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.73962, -0.65801, -27.3444 )
+
+[node name="Ruby" parent="." instance=ExtResource( 45 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.52049, -0.58256, -18.1935 )
+
+[node name="Ruby5" parent="." instance=ExtResource( 45 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -13.0973, -0.660302, -24.7245 )
+
+[node name="Ruby2" parent="." instance=ExtResource( 45 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.4435, -0.58256, -26.9139 )
+
+[node name="Ruby3" parent="." instance=ExtResource( 45 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.2133, -0.58256, -26.9139 )
+
+[node name="Ruby4" parent="." instance=ExtResource( 45 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.80454, -0.58256, -25.3051 )
+
+[node name="coin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 46 )
+
+[node name="coin2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 47 )
+
+[node name="GoldBar" parent="." instance=ExtResource( 48 )]
+transform = Transform( 0.978122, 0, -0.208031, 0, 1, 0, 0.208031, 0, 0.978122, -12.3879, -1.55754, -17.4077 )
