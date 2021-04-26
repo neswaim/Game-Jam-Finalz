@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/brickWallCurve.obj-3860d2ddfe650ebda66ab03c6be1b1b9.mesh"
+
+[deps]
+
+files=[ "res://.import/brickWallCurve.obj-3860d2ddfe650ebda66ab03c6be1b1b9.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/brickWallCurve.obj"
+dest_files=[ "res://.import/brickWallCurve.obj-3860d2ddfe650ebda66ab03c6be1b1b9.mesh", "res://.import/brickWallCurve.obj-3860d2ddfe650ebda66ab03c6be1b1b9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

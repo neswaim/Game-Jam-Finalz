@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road.obj-fe0a1c4ba154d4afe54087cbbe44341b.mesh"
+
+[deps]
+
+files=[ "res://.import/road.obj-fe0a1c4ba154d4afe54087cbbe44341b.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/road.obj"
+dest_files=[ "res://.import/road.obj-fe0a1c4ba154d4afe54087cbbe44341b.mesh", "res://.import/road.obj-fe0a1c4ba154d4afe54087cbbe44341b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

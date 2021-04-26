@@ -1,0 +1,1563 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/borderPillar.glb" type="PackedScene" id=2]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/columnLarge.glb" type="PackedScene" id=3]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/ironFence.glb" type="PackedScene" id=4]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/lanternCandle.glb" type="PackedScene" id=5]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/ironFenceBorderColumn.glb" type="PackedScene" id=6]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/pineCrooked.glb" type="PackedScene" id=7]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/stoneWall.glb" type="PackedScene" id=8]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/stoneWallDamaged.glb" type="PackedScene" id=9]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/stoneWallCurve.glb" type="PackedScene" id=10]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/pillarSmall.glb" type="PackedScene" id=11]
+[ext_resource path="res://Models/StoneUpper2.glb" type="PackedScene" id=12]
+[ext_resource path="res://Models/StoneUpper1.glb" type="PackedScene" id=13]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/ironFenceBorder.glb" type="PackedScene" id=14]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/ironFenceBorderCurve.glb" type="PackedScene" id=15]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/pillarSquare.glb" type="PackedScene" id=16]
+[ext_resource path="res://Models/StonePoor2.glb" type="PackedScene" id=17]
+[ext_resource path="res://Models/StoneMid1.glb" type="PackedScene" id=18]
+[ext_resource path="res://Models/StonePoor1.glb" type="PackedScene" id=19]
+[ext_resource path="res://Models/StoneMid2.glb" type="PackedScene" id=20]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/gravestoneWide.glb" type="PackedScene" id=21]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/gravestoneBroken.glb" type="PackedScene" id=22]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/grave.glb" type="PackedScene" id=23]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/graveBorder.glb" type="PackedScene" id=24]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/coffinOld.glb" type="PackedScene" id=25]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/zombie.glb" type="PackedScene" id=26]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/rocks.glb" type="PackedScene" id=28]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/debrisWood.glb" type="PackedScene" id=29]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/trunkLong.glb" type="PackedScene" id=30]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/bench.glb" type="PackedScene" id=31]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/benchDamaged.glb" type="PackedScene" id=32]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/debris.glb" type="PackedScene" id=33]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/lightpostDouble.glb" type="PackedScene" id=34]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/lightpostSingle.glb" type="PackedScene" id=35]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/shovelDirt.glb" type="PackedScene" id=36]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/rocksTall.glb" type="PackedScene" id=37]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/road.glb" type="PackedScene" id=38]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/trunk.glb" type="PackedScene" id=39]
+[ext_resource path="res://Models/Kenney/Models/GLTF format/pine.glb" type="PackedScene" id=40]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 2.49044, 4.86868 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1.4, 0.5, 0.5 )
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.5
+height = 1.5
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.5, 0.1, 0.5 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.352941, 0.482353, 0.380392, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+
+[node name="Game" type="Spatial"]
+
+[node name="Graveyard" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.930494, -0.976864, -13.077 )
+
+[node name="Collisions" type="StaticBody" parent="Graveyard"]
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( 15, 0, 0, 0, 3, 0, 0, 0, 0.3, 0.918038, 2.0453, 8.02041 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( 11, 0, 0, 0, 0.8, 0, 0, 0, 0.05, -1.75479, 2.10198, 1.52384 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -2.28089e-06, 0, 0.05, 0, 0.8, 0, -14, 0, -8.14603e-09, -13.8102, 2.10198, -11.6448 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -2.28089e-06, 0, 0.05, 0, 0.8, 0, -14, 0, -8.14603e-09, 14.664, 2.10198, -11.6448 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape7" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( 14, 0, 0, 0, 0.8, 0, 0, 0, 0.05, -0.0979431, 2.10198, -26.8308 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape8" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( 2.59808, 0, 0.025, 0, 0.8, 0, -1.5, 0, 0.0433013, -12.2796, 2.10198, -26.5257 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape9" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -1.5, 0, 0.0433013, 0, 0.8, 0, -2.59808, 0, -0.025, 13.7887, 2.10198, -25.5741 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape10" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -1.5, 0, 0.0433013, 0, 0.8, 0, -2.59808, 0, -0.025, -13.6005, 2.10198, -0.535748 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -6.51683e-07, 0, 0.3, 0, 1, 0, -4, 0, -4.88762e-08, 13.648, 2.78582, 4.71818 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -6.51683e-07, 0, 0.3, 0, 1, 0, -4, 0, -4.88762e-08, -12.0622, 2.78582, 5.22834 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape11" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 5.65416, 1.86833, 0.068593 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape12" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -11.3623, 1.57949, 0.169303 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape13" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -12.5709, 1.75755, -1.32124 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape14" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1, 0, 1, 0, -0.3, 0, -1.62921e-07, -11.6894, 1.75755, -7.54867 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape15" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1, 0, 1, 0, -0.3, 0, -1.62921e-07, -7.81543, 1.75755, -7.36247 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape19" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1, 0, 1, 0, -0.3, 0, -1.62921e-07, -5.39599, 1.75755, -5.36468 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape16" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1, 0, 1, 0, -0.3, 0, -1.62921e-07, -9.33483, 1.75755, -8.26839 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape20" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -11.5715, 1.77121, -9.80105 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape21" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 1.36649, 1.77121, -14.6316 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape32" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1.4, 0, 1, 0, -0.3, 0, -2.28089e-07, 3.13434, 1.77121, -8.40473 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape33" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1.4, 0, 1, 0, -0.3, 0, -2.28089e-07, 1.64707, 1.77121, -7.94346 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape34" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1.4, 0, 1, 0, -0.3, 0, -2.28089e-07, -0.737982, 1.77121, -8.74465 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape35" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1.4, 0, 1, 0, -0.3, 0, -2.28089e-07, -0.853747, 1.77121, -15.6143 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape60" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( 0.3, 0, 0, 0, 1, 0, 0, 0, 1.4, -11.8892, 1.77121, -25.5993 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape36" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1.4, 0, 1, 0, -0.3, 0, -2.28089e-07, 3.33333, 1.77121, -16.0763 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape22" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 12.5505, 2.79528, -17.5337 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape23" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 8.32029, 2.79528, -17.986 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape25" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 7.49811, 2.79528, -15.0836 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape26" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 8.88069, 2.79528, -12.6449 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape27" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 7.83756, 2.79528, -11.3471 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape61" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 9.31616, 2.79528, -21.0679 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape62" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 8.71323, 2.79528, -22.6652 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape63" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 13.8524, 2.54379, -22.3175 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape64" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 12.9857, 2.35471, -23.754 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape65" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 3, 0, 1, 0, -0.3, 0, -4.88762e-07, 9.96635, 1.93425, -25.7185 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape28" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 12.4353, 2.79528, -11.8061 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape37" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 4.27001, 1.96523, -19.813 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape38" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 4.27001, 1.96523, -21.5038 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape39" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 1.65239, 1.96523, -17.1966 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape40" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -0.228551, 1.96523, -19.0344 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape41" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -0.625585, 1.96523, -17.4372 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape42" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -2.26013, 1.96523, -19.484 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape43" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -3.6053, 1.96523, -18.4747 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape44" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -6.84204, 1.96523, -17.4801 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape45" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -8.31816, 1.96523, -18.5243 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape46" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -9.37209, 1.96523, -16.8601 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape47" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -10.3964, 1.96523, -15.1923 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape48" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -11.1589, 1.96523, -19.1103 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape49" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -12.1298, 1.96523, -20.6053 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape50" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -11.6976, 1.96523, -22.691 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape51" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -9.99596, 1.96523, -22.1909 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape52" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -6.15383, 1.96523, -23.7304 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape53" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -5.8826, 1.96523, -25.4602 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape54" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -3.99968, 1.96523, -23.5922 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape55" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, -2.72774, 1.96523, -25.0112 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape56" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 0.732267, 1.96523, -25.6393 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape57" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 2.48663, 1.96523, -25.1037 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape58" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 1.2415, 1.96523, -22.3378 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape59" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 0.406796, 1.96523, -23.5463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape29" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 13.6965, 2.79528, -10.6044 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape31" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -8.14603e-08, 0, 1.5, 0, 1, 0, -0.5, 0, -2.44381e-07, 13.6899, 1.8513, 0.446698 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape30" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -2.11797e-07, 0, 1.5, 0, 1, 0, -1.3, 0, -2.44381e-07, 13.8612, 2.79528, -14.8576 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape24" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -3.25841e-07, 0, 1.5, 0, 1, 0, -2, 0, -2.44381e-07, 6.26527, 2.79528, -16.9374 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape18" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( -4.88762e-08, 0, 1.6, 0, 1, 0, -0.3, 0, -2.60673e-07, -7.95155, 1.75755, -15.6194 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape17" type="CollisionShape" parent="Graveyard/Collisions"]
+transform = Transform( 0.102606, 0, 1.87939, 0, 1, 0, -0.281908, 0, 0.68404, -12.4426, 1.75755, -15.221 )
+shape = SubResource( 2 )
+
+[node name="Map" type="Spatial" parent="Graveyard"]
+
+[node name="pineCrooked" parent="Graveyard/Map" instance=ExtResource( 7 )]
+transform = Transform( 1.4, 0, 0, 0, 2.5, 0, 0, 0, 1.4, -0.5789, 1.29795, 8.08145 )
+
+[node name="pineCrooked6" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19918, 0, 0 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0.206088 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked6/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, -0.131892 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked6/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 0.654039, -0.000774756, 0.463376 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked6/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked6/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, -0.495989 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked6/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked6/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked6/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked6/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.17674, 0, 0 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76642, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked5/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 0.695584, -8.9407e-08, 0.414683 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked5/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 1.07109, 4.47035e-08, -1.74461 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, -0.417612 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked5/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.924994 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 1.14555, -8.9407e-08, -0.121565 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked5/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked7" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 10.6166, 0, -3.98731 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked7" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked7/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked9" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -8.82068, 0, -3.78988 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked9" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked8" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 10.5701, 0, -1.98373 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/pineCrooked8" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked8/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/pineCrooked8" instance=ExtResource( 7 )]
+transform = Transform( -1.95505e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, -1.95505e-07, 0.9773, -5.96046e-08, -19.0136 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked8/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="Trees Left2" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -10.848, -0.334615, -13.3012 )
+
+[node name="pineCrooked6" parent="Graveyard/Map/pineCrooked/Trees Left2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19918, 0, 0 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0.206088 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, -0.131892 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 0.654039, -0.000774756, 0.463376 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, -0.495989 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked6/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked/Trees Left2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.17674, 0, 0 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76642, 0, 9.53674e-07 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked5/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 0.695584, -8.9407e-08, 0.414683 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked5/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 1.07109, 4.47035e-08, -1.74461 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654812, -5.96046e-08, -0.417612 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked5/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.924994 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 1.14555, -8.9407e-08, -0.121565 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked5/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="Trees Left" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 12.3091, -0.334615, -14.8617 )
+
+[node name="pineCrooked6" parent="Graveyard/Map/pineCrooked/Trees Left" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19918, 0, 0 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0.206088 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, -0.131892 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 0.654039, -0.000774756, 0.463376 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, -0.495989 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked6/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked/Trees Left" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.17674, 0, 0 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76642, 0, 9.53674e-07 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked5/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 0.695584, -8.9407e-08, 0.414683 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked5/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 1.07109, 4.47035e-08, -1.74461 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654812, -5.96046e-08, -0.417612 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked5/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.924994 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 1.14555, -8.9407e-08, -0.121565 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked5/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="Trees Left3" parent="Graveyard/Map/pineCrooked" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.259111, -0.334615, -26.4985 )
+
+[node name="pineCrooked6" parent="Graveyard/Map/pineCrooked/Trees Left3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19918, 0, 0 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0.206088 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, -0.131892 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 0.654039, -0.000774756, 0.463376 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, -0.495989 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked6/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked/Trees Left3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.17674, 0, 0 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76642, 0, 9.53674e-07 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 0.695584, -8.9407e-08, 0.414683 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 1.07109, 4.47035e-08, -1.74461 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654812, -5.96046e-08, -0.41761 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.924994 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -19.2483, -5.96046e-08, 0.836252 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.924994 )
+
+[node name="pineCrooked5" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -20.1119, -5.96046e-08, 2.70127 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.924994 )
+
+[node name="pineCrooked6" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.75162, -5.96046e-08, 1.79361 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5/pineCrooked6" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.924994 )
+
+[node name="pineCrooked7" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 1.54921, -5.96046e-08, 0.438007 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked5/pineCrooked7" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.924994 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, -1.19209e-07, 0, 1.2, 0, 1.19209e-07, 0, 1.2, 1.14555, -8.9407e-08, -0.121565 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked5/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/pineCrooked/Trees Left3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09001, 0, 0 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked4/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked4/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked4" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked4/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3" instance=ExtResource( 7 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 1.7128, 0, 0.618143 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked2" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked2/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/pineCrooked/Trees Left3" instance=ExtResource( 7 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.654811, -5.96046e-08, 0.463275 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/pineCrooked/Trees Left3/pineCrooked3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.306008, 5.96046e-08, -0.832815 )
+
+[node name="borderPillar2" parent="Graveyard/Map" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 6.2, 0, 0, 0, 5, -1.28597, 1.28936, 1.67313 )
+
+[node name="borderPillar" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.621929, 0, 0 )
+
+[node name="columnLarge" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.301744, -7.45058e-08, -0.0018667 )
+
+[node name="columnLarge2" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.959435, -7.45058e-08, -0.0018667 )
+
+[node name="lanternCandle" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 5 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.325, 0.284873, 0.554168, -0.00790232 )
+
+[node name="lanternCandle2" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 5 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.325, -0.972971, 0.554168, -0.00790232 )
+
+[node name="ironFenceBorderColumn" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 6 )]
+transform = Transform( 0.9, 0, 0, 0, 0.6, 0, 0, 0, 0.75, -1.10454, -0.00536412, -0.340851 )
+
+[node name="ironFenceBorderColumn2" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 6 )]
+transform = Transform( -0.9, 0, -2.44381e-07, 0, 0.6, 0, 2.93257e-07, 0, -0.75, 0.40371, -0.00536412, 0.305412 )
+
+[node name="stoneWall" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 8 )]
+transform = Transform( 0.6, 0, -3.15797e-14, 0, 0.6, 0, 2.52637e-14, 0, 0.75, 1.2258, -0.00312292, -0.337096 )
+
+[node name="stoneWall2" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 8 )]
+transform = Transform( 0.3, 0, -3.15797e-14, 0, 0.6, 0, 1.26319e-14, 0, 0.75, -1.69425, -0.00312292, -0.342015 )
+
+[node name="stoneWallCurve" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 10 )]
+transform = Transform( -0.0209398, 0, -0.749543, 0, 0.6, 0, 0.599634, 0, -0.0261748, -2.21725, -0.00249842, -0.265728 )
+
+[node name="stoneWallDamaged" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 9 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.75, 1.8202, -0.00312292, -0.334438 )
+
+[node name="stoneWallDamaged2" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 9 )]
+transform = Transform( -0.6, 0, -2.44381e-07, 0, 0.6, 0, 1.95505e-07, 0, -0.75, 2.89583, -0.00312292, 0.318405 )
+
+[node name="ironFence" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 4 )]
+transform = Transform( 0.675, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -0.319085, 1.49012e-08, -0.34087 )
+
+[node name="ironFenceBorder" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -0.953989 )
+
+[node name="ironFenceBorder2" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -1.45251 )
+
+[node name="ironFenceBorder3" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -1.9517 )
+
+[node name="ironFenceBorder4" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -3.44348 )
+
+[node name="ironFenceBorder5" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -2.9414 )
+
+[node name="ironFenceBorder7" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -3.9419 )
+
+[node name="ironFenceBorder8" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -4.44258 )
+
+[node name="ironFenceBorder9" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -4.94135 )
+
+[node name="ironFenceBorder6" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, -2.72905, -0.00249833, -2.44535 )
+
+[node name="ironFenceBorderCurve" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 15 )]
+transform = Transform( -0.492404, 0, -0.0868242, 0, 0.5, 0, 0.0868242, 0, -0.492404, -2.35987, -0.00249828, -5.44195 )
+
+[node name="ironFenceBorderCurve2" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 15 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, 2.97441, -0.00249828, -5.50207 )
+
+[node name="pillarSquare" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 16 )]
+transform = Transform( -6.51683e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -6.51683e-08, -2.51473, -0.00249822, -0.661796 )
+
+[node name="ironFenceBorder10" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -0.5, 0, -1.62921e-07, 0, 0.5, 0, 1.62921e-07, 0, -0.5, -1.90782, -0.00249833, -5.48691 )
+
+[node name="ironFenceBorder15" parent="Graveyard/Map/borderPillar2/ironFenceBorder10" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96685, 0, -1.90735e-06 )
+
+[node name="ironFenceBorder12" parent="Graveyard/Map/borderPillar2/ironFenceBorder10/ironFenceBorder15" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99046, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder11" parent="Graveyard/Map/borderPillar2/ironFenceBorder10/ironFenceBorder15" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.992572, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder14" parent="Graveyard/Map/borderPillar2/ironFenceBorder10" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98527, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder12" parent="Graveyard/Map/borderPillar2/ironFenceBorder10/ironFenceBorder14" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99046, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder11" parent="Graveyard/Map/borderPillar2/ironFenceBorder10/ironFenceBorder14" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.992572, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder12" parent="Graveyard/Map/borderPillar2/ironFenceBorder10" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99046, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder13" parent="Graveyard/Map/borderPillar2/ironFenceBorder10" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.70822, 0, -5.72205e-06 )
+
+[node name="ironFenceBorder11" parent="Graveyard/Map/borderPillar2/ironFenceBorder10" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.992572, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder11" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 14 )]
+transform = Transform( -8.14603e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.14603e-08, 2.97369, -0.00249833, -5.00437 )
+
+[node name="ironFenceBorder15" parent="Graveyard/Map/borderPillar2/ironFenceBorder11" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96685, 0, -1.90735e-06 )
+
+[node name="ironFenceBorder12" parent="Graveyard/Map/borderPillar2/ironFenceBorder11/ironFenceBorder15" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99046, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder11" parent="Graveyard/Map/borderPillar2/ironFenceBorder11/ironFenceBorder15" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.992572, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder14" parent="Graveyard/Map/borderPillar2/ironFenceBorder11" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -2.98527, 0, -4.76837e-07 )
+
+[node name="ironFenceBorder12" parent="Graveyard/Map/borderPillar2/ironFenceBorder11/ironFenceBorder14" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99046, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder11" parent="Graveyard/Map/borderPillar2/ironFenceBorder11/ironFenceBorder14" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.992572, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder12" parent="Graveyard/Map/borderPillar2/ironFenceBorder11" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99046, 0, -9.53674e-07 )
+
+[node name="ironFenceBorder13" parent="Graveyard/Map/borderPillar2/ironFenceBorder11" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.70822, 0, -5.72205e-06 )
+
+[node name="ironFenceBorder11" parent="Graveyard/Map/borderPillar2/ironFenceBorder11" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.992572, 0, -9.53674e-07 )
+
+[node name="pillarSmall" parent="Graveyard/Map/borderPillar2" instance=ExtResource( 11 )]
+transform = Transform( -1.30337e-07, 0, 0.5, 0, 0.8, 0, -0.8, 0, -8.14603e-08, 3.2212, -0.00249834, -0.3497 )
+
+[node name="Stones" type="Spatial" parent="Graveyard/Map/borderPillar2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19209e-07, 0, 2.38419e-07 )
+visible = false
+
+[node name="StonePoor2" parent="Graveyard/Map/borderPillar2/Stones" instance=ExtResource( 17 )]
+transform = Transform( -1.30337e-08, 0, 0.08, 0, 0.08, 0, -0.08, 0, -1.30337e-08, 0.31195, -0.00596064, -1.95597 )
+
+[node name="StonePoor1" parent="Graveyard/Map/borderPillar2/Stones" instance=ExtResource( 19 )]
+transform = Transform( -1.30337e-08, 0, 0.08, 0, 0.08, 0, -0.08, 0, -1.30337e-08, 0.701744, -0.0168123, -1.81146 )
+
+[node name="StoneMid2" parent="Graveyard/Map/borderPillar2/Stones" instance=ExtResource( 20 )]
+transform = Transform( -0.1, 0, -3.25841e-08, 0, 0.1, 0, 3.25841e-08, 0, -0.1, -0.432421, -0.0111095, -2.32049 )
+
+[node name="StoneMid1" parent="Graveyard/Map/borderPillar2/Stones" instance=ExtResource( 18 )]
+transform = Transform( -1.62921e-08, 0, 0.1, 0, 0.1, 0, -0.1, 0, -1.62921e-08, -0.0564069, -0.0141838, -2.49106 )
+
+[node name="StoneUpper2" parent="Graveyard/Map/borderPillar2/Stones" instance=ExtResource( 12 )]
+transform = Transform( -6.51683e-09, 0, 0.04, 0, 0.04, 0, -0.04, 0, -6.51683e-09, 1.56649, 1.66632e-05, -1.95293 )
+
+[node name="StoneUpper1" parent="Graveyard/Map/borderPillar2/Stones" instance=ExtResource( 13 )]
+transform = Transform( -1.14044e-08, 0, 0.07, 0, 0.07, 0, -0.07, 0, -1.14044e-08, 1.16701, -0.00663828, -1.99563 )
+
+[node name="gravestoneBroken" parent="Graveyard/Map/borderPillar2/Stones" instance=ExtResource( 22 )]
+transform = Transform( 0.6, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.858237, -0.00227118, -2.05524 )
+
+[node name="gravestoneWide" parent="Graveyard/Map/borderPillar2/Stones" instance=ExtResource( 21 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.00742, -0.00347114, -1.77309 )
+
+[node name="Stones2" type="Spatial" parent="Graveyard/Map"]
+transform = Transform( 5, 0, 0, 0, 5.5, 0, 0, 0, 5, -1.28597, 1.28936, 1.67313 )
+
+[node name="StonePoor2" parent="Graveyard/Map/Stones2" instance=ExtResource( 17 )]
+transform = Transform( -1.30337e-08, 0, 0.08, 0, 0.08, 0, -0.08, 0, -1.30337e-08, -2.08717, -0.00596064, -1.84634 )
+
+[node name="StonePoor1" parent="Graveyard/Map/Stones2" instance=ExtResource( 19 )]
+transform = Transform( -1.30337e-08, 0, 0.08, 0, 0.08, 0, -0.08, 0, -1.30337e-08, -1.30876, -0.0168123, -1.81324 )
+
+[node name="StoneMid2" parent="Graveyard/Map/Stones2" instance=ExtResource( 20 )]
+transform = Transform( -0.1, 0, -3.25841e-08, 0, 0.1, 0, 3.25841e-08, 0, -0.1, -2.17366, -0.0111095, -3.30199 )
+
+[node name="StoneMid1" parent="Graveyard/Map/Stones2" instance=ExtResource( 18 )]
+transform = Transform( -1.62921e-08, 0, 0.1, 0, 0.1, 0, -0.1, 0, -1.62921e-08, -1.3279, -0.0141838, -3.39427 )
+
+[node name="StoneUpper2" parent="Graveyard/Map/Stones2" instance=ExtResource( 12 )]
+transform = Transform( -6.51683e-09, 0, 0.04, 0, 0.04, 0, -0.04, 0, -6.51683e-09, 0.0890078, 1.66632e-05, -3.46704 )
+
+[node name="StoneUpper1" parent="Graveyard/Map/Stones2" instance=ExtResource( 13 )]
+transform = Transform( -1.14045e-08, 0, 0.07, 0, 0.07, 0, -0.07, 0, -1.14045e-08, 0.923589, -0.00663828, -3.55482 )
+
+[node name="gravestoneBroken" parent="Graveyard/Map/Stones2" instance=ExtResource( 22 )]
+transform = Transform( 0.6, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.153892, -0.00227118, -2.05524 )
+
+[node name="gravestoneBroken2" parent="Graveyard/Map/Stones2" instance=ExtResource( 22 )]
+transform = Transform( -9.77524e-08, 0, 0.3, 0, 0.3, 0, -0.6, 0, -4.88762e-08, -2.1132, -0.00227118, -5.47349 )
+
+[node name="gravestoneWide" parent="Graveyard/Map/Stones2" instance=ExtResource( 21 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.894202, -0.00347114, -2.00696 )
+
+[node name="graveBorder" parent="Graveyard/Map/Stones2/gravestoneWide" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.38564, 0.00399977, 1.7878 )
+visible = false
+
+[node name="grave" parent="Graveyard/Map/Stones2/gravestoneWide" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.87242, 0.00399977, 1.75194 )
+visible = false
+
+[node name="grave2" parent="Graveyard/Map/Stones2/gravestoneWide" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.37923, 0.00399977, -3.62012 )
+visible = false
+
+[node name="grave3" parent="Graveyard/Map/Stones2/gravestoneWide" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1925, 0.00399992, -3.48894 )
+visible = false
+
+[node name="graveBorder2" parent="Graveyard/Map/Stones2/gravestoneWide" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61912, 0.00399978, -7.27213 )
+visible = false
+
+[node name="grave4" parent="Graveyard/Map/Stones2/gravestoneWide" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174128, 0.00399949, -3.73117 )
+visible = false
+
+[node name="grave5" parent="Graveyard/Map/Stones2/gravestoneWide" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54352, 0.00399949, 0.996399 )
+visible = false
+
+[node name="grave6" parent="Graveyard/Map/Stones2/gravestoneWide" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0302086, 0.00399977, 1.16045 )
+visible = false
+
+[node name="Coffins" type="Spatial" parent="Graveyard/Map"]
+
+[node name="zombie" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( 1.2, 0, 0, 0, -9.61651e-08, 1.312, 0, -2.2, -5.73493e-08, -0.858376, 0.55467, -12.3871 )
+
+[node name="zombie3" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( 1.2, 0, 0, 0, -9.61651e-08, 1.312, 0, -2.2, -5.73493e-08, -7.99106, 0.55467, -12.2153 )
+
+[node name="zombie4" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( 1.2, 0, 0, 0, -9.61651e-08, 1.312, 0, -2.2, -5.73493e-08, -12.0951, 0.55467, -11.8474 )
+
+[node name="zombie9" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( -0.208378, -2.16658, 2.10505e-07, 0, -3.58426e-07, -1.312, 1.18177, -0.382027, 3.71177e-08, -8.79338, 0.55467, -25.2055 )
+
+[node name="zombie5" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( 1.2, 0, 0, 0, -9.61651e-08, 1.312, 0, -2.2, -5.73493e-08, -11.7868, 0.55467, -3.7978 )
+
+[node name="zombie6" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( 1.2, 0, 0, 0, -9.61651e-08, 1.312, 0, -2.2, -5.73493e-08, -7.74433, 0.55467, -3.7978 )
+
+[node name="zombie7" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( 1.2, 0, 0, 0, -9.61651e-08, 1.312, 0, -2.2, -5.73493e-08, -0.598015, 0.55467, -5.25475 )
+
+[node name="zombie8" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( 1.2, 0, 0, 0, -9.61651e-08, 1.312, 0, -2.2, -5.73493e-08, 3.04458, 0.55467, -5.01589 )
+
+[node name="zombie2" parent="Graveyard/Map/Coffins" instance=ExtResource( 26 )]
+transform = Transform( 1.2, 0, 0, 0, -9.61651e-08, 1.312, 0, -2.2, -5.73493e-08, 3.37163, 0.55467, -12.8017 )
+
+[node name="coffinOld" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -2.5, 0, -8.14603e-07, 0, 2.5, 0, 8.14603e-07, 0, -2.5, -1.01179, 0.278932, -13.2992 )
+
+[node name="coffinOld3" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -2.5, 0, -8.14603e-07, 0, 2.5, 0, 8.14603e-07, 0, -2.5, -8.12353, 0.278932, -13.0857 )
+
+[node name="coffinOld4" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -2.5, 0, -8.14603e-07, 0, 2.5, 0, 8.14603e-07, 0, -2.5, -12.2957, 0.278932, -12.6748 )
+
+[node name="coffinOld5" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -2.5, 0, -8.14603e-07, 0, 2.5, 0, 8.14603e-07, 0, -2.5, -11.9703, 0.278932, -4.66485 )
+
+[node name="coffinOld6" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -2.5, 0, -8.14603e-07, 0, 2.5, 0, 8.14603e-07, 0, -2.5, -7.93427, 0.278932, -4.69555 )
+
+[node name="coffinOld7" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -2.5, 0, -8.14603e-07, 0, 2.5, 0, 8.14603e-07, 0, -2.5, -0.749893, 0.278932, -6.09958 )
+
+[node name="coffinOld8" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -2.5, 0, -8.14603e-07, 0, 2.5, 0, 8.14603e-07, 0, -2.5, 2.86971, 0.278932, -5.90188 )
+
+[node name="coffinOld2" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -2.5, 0, -8.14603e-07, 0, 2.5, 0, 8.14603e-07, 0, -2.5, 3.17382, 0.278932, -13.6597 )
+
+[node name="coffinOld9" parent="Graveyard/Map/Coffins" instance=ExtResource( 25 )]
+transform = Transform( -0.43412, 0, -2.46202, 0, 2.5, 0, 2.46202, 0, -0.43412, -9.7779, 0.278932, -25.3216 )
+
+[node name="Details" type="Spatial" parent="Graveyard/Map"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.1885, 0, 0 )
+visible = false
+
+[node name="debrisWood" parent="Graveyard/Map/Details" instance=ExtResource( 29 )]
+transform = Transform( 1.2, 0, 0, 0, 1.3, 0, 0, 0, 1.2, -7.72692, 1.25923, -0.0996923 )
+
+[node name="lightpostSingle" parent="Graveyard/Map/Details" instance=ExtResource( 35 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -3.28259, 1.26183, -1.41234 )
+
+[node name="lightpostDouble" parent="Graveyard/Map/Details" instance=ExtResource( 34 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -4.89971, 1.24561, -1.90818 )
+
+[node name="pine" parent="Graveyard/Map/Details" instance=ExtResource( 40 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -4.37389, 1.29067, -3.98963 )
+
+[node name="pineCrooked" parent="Graveyard/Map/Details" instance=ExtResource( 7 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -4.5858, 1.37037, -6.47391 )
+
+[node name="road" parent="Graveyard/Map/Details" instance=ExtResource( 38 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0402, 1.26823, -3.41328 )
+
+[node name="rocks" parent="Graveyard/Map/Details" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0049, 1.26943, -4.55838 )
+
+[node name="rocksTall" parent="Graveyard/Map/Details" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.64848, 1.28601, -6.02149 )
+
+[node name="shovelDirt" parent="Graveyard/Map/Details" instance=ExtResource( 36 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.6332, 1.27223, -2.21236 )
+
+[node name="trunk" parent="Graveyard/Map/Details" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7806, 1.27032, -7.22209 )
+
+[node name="trunkLong" parent="Graveyard/Map/Details" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96675, 1.2568, -5.26728 )
+
+[node name="bench" parent="Graveyard/Map/Details" instance=ExtResource( 31 )]
+transform = Transform( 2.4, 0, 0, 0, 2.3, 0, 0, 0, 2.2, -9.82088, 1.23622, -1.18663 )
+
+[node name="benchDamaged" parent="Graveyard/Map/Details" instance=ExtResource( 32 )]
+transform = Transform( 2, 0, 0, 0, 2.3, 0, 0, 0, 2.2, -9.90829, 1.23609, -0.0845013 )
+
+[node name="debris" parent="Graveyard/Map/Details" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6164, 1.2612, -2.09194 )
+
+[node name="Details2" type="Spatial" parent="Graveyard/Map"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.1885, 0, 0 )
+
+[node name="debrisWood" parent="Graveyard/Map/Details2" instance=ExtResource( 29 )]
+transform = Transform( 1.2, 0, 0, 0, 1.3, 0, 0, 0, 1.2, -43.814, 1.25923, -15.9005 )
+
+[node name="lightpostSingle" parent="Graveyard/Map/Details2" instance=ExtResource( 35 )]
+transform = Transform( 0.831647, 0, 3.91259, 0, 4, 0, -3.91259, 0, 0.831647, -23.6092, 1.26183, 0.136037 )
+
+[node name="SpotLight" type="SpotLight" parent="Graveyard/Map/Details2/lightpostSingle"]
+transform = Transform( 0.25, 0, 0, 0, 2.98122e-09, 0.25, 0, -0.25, 2.98122e-09, -0.0497198, 0.97262, -0.261477 )
+light_color = Color( 0.894118, 0.980392, 0.494118, 1 )
+light_energy = 0.9
+shadow_enabled = true
+shadow_color = Color( 0.0156863, 0.101961, 0.0235294, 1 )
+
+[node name="lightpostSingle2" parent="Graveyard/Map/Details2" instance=ExtResource( 35 )]
+transform = Transform( -1.49843, 0, 3.70874, 0, 4, 0, -3.70874, 0, -1.49843, -23.1538, 1.99723, -16.3621 )
+
+[node name="SpotLight" type="SpotLight" parent="Graveyard/Map/Details2/lightpostSingle2"]
+transform = Transform( 0.25, 0, 0, 0, 2.98122e-09, 0.25, 0, -0.25, 2.98122e-09, -0.0497198, 0.97262, -0.261477 )
+light_color = Color( 0.894118, 0.980392, 0.494118, 1 )
+light_energy = 0.9
+shadow_enabled = true
+shadow_color = Color( 0.0156863, 0.101961, 0.0235294, 1 )
+
+[node name="lightpostSingle3" parent="Graveyard/Map/Details2" instance=ExtResource( 35 )]
+transform = Transform( -2.97258, 0, 2.67653, 0, 4, 0, -2.67653, 0, -2.97258, -37.5551, 1.31155, -26.514 )
+
+[node name="SpotLight" type="SpotLight" parent="Graveyard/Map/Details2/lightpostSingle3"]
+transform = Transform( 0.25, 0, 0, 0, 2.98122e-09, 0.25, 0, -0.25, 2.98122e-09, -0.0497198, 0.97262, -0.261477 )
+light_color = Color( 0.894118, 0.980392, 0.494118, 1 )
+light_energy = 0.9
+shadow_enabled = true
+shadow_color = Color( 0.0156863, 0.101961, 0.0235294, 1 )
+
+[node name="lightpostDouble" parent="Graveyard/Map/Details2" instance=ExtResource( 34 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -4.89971, 1.24561, -1.90818 )
+
+[node name="pine" parent="Graveyard/Map/Details2" instance=ExtResource( 40 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -50.0431, 1.29067, -2.24026 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/Details2" instance=ExtResource( 7 )]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 2, -35.4468, 1.2333, -16.9345 )
+
+[node name="pine2" parent="Graveyard/Map/Details2" instance=ExtResource( 40 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -23.2856, 2.50111, -10.5991 )
+
+[node name="pineCrooked4" parent="Graveyard/Map/Details2/pine2" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701734, -0.0534949, -0.588451 )
+
+[node name="pine3" parent="Graveyard/Map/Details2/pine2" instance=ExtResource( 40 )]
+transform = Transform( -0.147601, 0, 0.984808, 0, 1.25, 0, -0.837087, 0, -0.173648, -2.52993, -0.0892506, -1.06849 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine3" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, -1.49012e-08, 0, 0.85, 0, 7.45058e-09, 0, 1, -0.701734, 0.054744, -0.58845 )
+
+[node name="pine4" parent="Graveyard/Map/Details2/pine2/pine3" instance=ExtResource( 40 )]
+transform = Transform( 0.34202, 0, 1.10552, 0, 1, 0, -0.798739, 0, 0.34202, 2.49109, -0.0636734, -1.03644 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine3/pine4" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701733, -0.053495, -0.588451 )
+
+[node name="pine5" parent="Graveyard/Map/Details2/pine2/pine3/pine4" instance=ExtResource( 40 )]
+transform = Transform( -0.798636, 0, -0.708017, 0, 1, 0, 0.511543, 0, -0.798636, -1.12847, -0.0281767, 0.931698 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine3/pine4/pine5" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701733, -0.053495, -0.588451 )
+
+[node name="pine6" parent="Graveyard/Map/Details2/pine2/pine3/pine4" instance=ExtResource( 40 )]
+transform = Transform( 0.948417, 0, -4.47035e-08, 0, 1, 0, 5.96046e-08, 0, 1.06729, -3.22932, -0.283031, 4.15415 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine3/pine4/pine6" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701733, -0.053495, -0.588451 )
+
+[node name="pine7" parent="Graveyard/Map/Details2/pine2/pine3/pine4" instance=ExtResource( 40 )]
+transform = Transform( -0.941347, 0, 0.130069, 0, 1, 0, -0.115582, 0, -1.05933, -1.51356, -0.157469, 2.48934 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine3/pine4/pine7" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701733, -0.053495, -0.588451 )
+
+[node name="pine5" parent="Graveyard/Map/Details2/pine2/pine3" instance=ExtResource( 40 )]
+transform = Transform( 0.34202, 0, 1.10552, 0, 1, 0, -0.798739, 0, 0.34202, 7.15338, -0.484027, -3.31232 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine3/pine5" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 2.98023e-08, 0, 0.85, 0, 7.45058e-09, 0, 1, -0.701733, 0.0453793, -0.588451 )
+
+[node name="pine5" parent="Graveyard/Map/Details2/pine2/pine3/pine5" instance=ExtResource( 40 )]
+transform = Transform( -0.798636, 0, -0.708017, 0, 1, 0, 0.511543, 0, -0.798636, -1.12847, 0.0526415, 0.931705 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine3/pine5/pine5" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, -2.98023e-08, 0, 0.85, 0, 0, 0, 1, -0.701735, -0.000596188, -0.588451 )
+
+[node name="pine6" parent="Graveyard/Map/Details2/pine2/pine3/pine5" instance=ExtResource( 40 )]
+transform = Transform( -0.821352, 0, 0.533644, 0, 1, 0, -0.474208, 0, -0.924299, -2.83786, 0.0399732, -1.54461 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine3/pine5/pine6" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, -2.38419e-07, 0, 0.85, 0, 0, 0, 1, -0.701736, 0.0252855, -0.588454 )
+
+[node name="pine4" parent="Graveyard/Map/Details2/pine2" instance=ExtResource( 40 )]
+transform = Transform( -0.147601, 0, 0.984808, 0, 1.25, 0, -0.837087, 0, -0.173648, -11.6723, -0.637857, -3.12064 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine4" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, -1.49012e-08, 0, 0.85, 0, 7.45058e-09, 0, 1, -0.701736, 0.00235083, -0.588451 )
+
+[node name="pine4" parent="Graveyard/Map/Details2/pine2/pine4" instance=ExtResource( 40 )]
+transform = Transform( 0.34202, 0, 1.10552, 0, 1, 0, -0.798739, 0, 0.34202, 2.49109, 0.00245202, -1.03644 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine4/pine4" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 2.98023e-08, 0, 0.85, 0, 7.45058e-09, 0, 1, -0.701733, -0.0255053, -0.588449 )
+
+[node name="pine5" parent="Graveyard/Map/Details2/pine2/pine4/pine4" instance=ExtResource( 40 )]
+transform = Transform( -0.798636, 0, -0.708017, 0, 1, 0, 0.511543, 0, -0.798636, -1.12847, -0.0281767, 0.931698 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine4/pine4/pine5" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 5.96046e-08, 0, 0.85, 0, -2.98023e-08, 0, 1, -0.701732, 0.0159876, -0.588453 )
+
+[node name="pine5" parent="Graveyard/Map/Details2/pine2" instance=ExtResource( 40 )]
+transform = Transform( 0.837087, 0, 0.173648, 0, 1.25, 0, -0.147601, 0, 0.984808, -10.302, -0.525142, -3.42103 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine5" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701733, -0.053495, -0.588451 )
+
+[node name="pine4" parent="Graveyard/Map/Details2/pine2/pine5" instance=ExtResource( 40 )]
+transform = Transform( 0.34202, 0, 1.10552, 0, 1, 0, -0.798739, 0, 0.34202, 2.78752, -0.0636734, -0.644523 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine5/pine4" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701733, -0.053495, -0.588451 )
+
+[node name="pine5" parent="Graveyard/Map/Details2/pine2/pine5/pine4" instance=ExtResource( 40 )]
+transform = Transform( -0.798636, 0, -0.708017, 0, 1, 0, 0.511543, 0, -0.798636, -1.12847, -0.0281767, 0.931698 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine5/pine4/pine5" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701733, -0.053495, -0.588451 )
+
+[node name="pine6" parent="Graveyard/Map/Details2/pine2" instance=ExtResource( 40 )]
+transform = Transform( 0.0222882, 0, -0.988869, 0, 1.25, 0, 0.864955, 0, -0.0296843, -8.96542, -0.624499, -6.49033 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine6" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701735, -0.00138284, -0.588451 )
+
+[node name="pine5" parent="Graveyard/Map/Details2/pine2/pine6" instance=ExtResource( 40 )]
+transform = Transform( -0.798636, 0, -0.708017, 0, 1, 0, 0.511543, 0, -0.798636, -1.12847, -0.00552382, 0.931698 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2/pine2/pine6/pine5" instance=ExtResource( 7 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 1, -0.701731, 0.00961188, -0.588451 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/Details2/pine2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1.4, 0, 0, 0, 1, -0.585018, -0.254832, -3.50387 )
+
+[node name="pineCrooked" parent="Graveyard/Map/Details2" instance=ExtResource( 7 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -31.9225, 1.20598, 0.141727 )
+
+[node name="pineCrooked2" parent="Graveyard/Map/Details2" instance=ExtResource( 7 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -35.7314, 1.19721, -14.6613 )
+
+[node name="pineCrooked3" parent="Graveyard/Map/Details2" instance=ExtResource( 7 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -48.7608, 1.22329, -9.75912 )
+
+[node name="road" parent="Graveyard/Map/Details2" instance=ExtResource( 38 )]
+transform = Transform( 2.99269, 0, 0.209269, 0, 1.5, 0, -0.209269, 0, 2.99269, -26.53, 1.26823, 0.293317 )
+
+[node name="road3" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( -0.241922, 0, -0.970296, 0, 1, 0, 0.970296, 0, -0.241922, -2.05329, 0, -1.07585 )
+
+[node name="road4" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( 0.559193, 0, 0.829038, 0, 1, 0, -0.829038, 0, 0.559193, -4.21434, 0, -1.22697 )
+
+[node name="road5" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( 0.898794, 0, 0.438371, 0, 1, 0, -0.438371, 0, 0.898794, -4.62463, 0, -1.83493 )
+
+[node name="road6" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( 0.994522, 0, 0.104529, 0, 1, 0, -0.104529, 0, 0.994522, -4.77608, 0, -2.62417 )
+
+[node name="road7" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( 0.981627, 0, -0.190809, 0, 1, 0, 0.190809, 0, 0.981627, -4.6566, 0, -4.33287 )
+
+[node name="road8" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( -0.99863, 0, -0.0523363, 0, 1, 0, 0.0523363, 0, -0.99863, -4.6637, 0, -5.23257 )
+
+[node name="road9" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( -0.992547, -0.0699016, 0.0998298, 0, 0.819152, 0.573577, -0.12187, 0.569301, -0.813046, -0.0900755, 0.438577, -2.77503 )
+
+[node name="road10" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( -0.992547, 0.0211623, 0.120017, 0, 0.984808, -0.173648, -0.121869, -0.172354, -0.977467, 0.23497, 0.675794, -5.1391 )
+
+[node name="road11" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( -0.975737, 0.026922, -0.217286, 0.084186, 0.96225, -0.258819, 0.202115, -0.270832, -0.941169, 0.492064, 0.203281, -7.83286 )
+
+[node name="road2" parent="Graveyard/Map/Details2/road" instance=ExtResource( 38 )]
+transform = Transform( 0.694658, 0, 0.71934, 0, 1, 0, -0.71934, 0, 0.694658, -0.377813, 0, -0.722934 )
+
+[node name="rocks" parent="Graveyard/Map/Details2" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2307, 1.26943, 0.749475 )
+
+[node name="rocksTall" parent="Graveyard/Map/Details2" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5231, 1.28601, -5.46985 )
+
+[node name="rocksTall2" parent="Graveyard/Map/Details2" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.025, 1.28601, -15.6583 )
+
+[node name="shovelDirt" parent="Graveyard/Map/Details2" instance=ExtResource( 36 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -35.3709, 1.26527, -7.97654 )
+
+[node name="trunk" parent="Graveyard/Map/Details2" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.3292, 1.27032, 0.618402 )
+
+[node name="trunkLong" parent="Graveyard/Map/Details2" instance=ExtResource( 30 )]
+transform = Transform( 1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -46.4969, 1.22652, -8.29725 )
+
+[node name="trunkLong2" parent="Graveyard/Map/Details2" instance=ExtResource( 30 )]
+transform = Transform( 1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -36.8113, 1.22652, -16.3992 )
+
+[node name="bench" parent="Graveyard/Map/Details2" instance=ExtResource( 31 )]
+transform = Transform( -0.209174, 0, 2.19163, 0, 2.3, 0, -2.39087, 0, -0.191743, -23.3453, 2.25362, -14.523 )
+
+[node name="benchDamaged" parent="Graveyard/Map/Details2" instance=ExtResource( 32 )]
+transform = Transform( 1.53209, 0, -1.41413, 0, 2.3, 0, 1.28558, 0, 1.6853, -49.2773, 1.23609, 0.0461149 )
+
+[node name="benchDamaged2" parent="Graveyard/Map/Details2" instance=ExtResource( 32 )]
+transform = Transform( -2, 0, -7.16851e-07, 0, 2.3, 0, 6.51684e-07, 0, -2.2, -27.8977, 1.25785, -26.0251 )
+
+[node name="debris" parent="Graveyard/Map/Details2" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8389, 1.2612, 1.06332 )
+
+[node name="debris2" parent="Graveyard/Map/Details2" instance=ExtResource( 33 )]
+transform = Transform( 1.11839, 0, 1.65808, 0, 2, 0, -1.65808, 0, 1.11839, -42.7112, 1.2612, 0.694691 )
+
+[node name="debris3" parent="Graveyard/Map/Details2" instance=ExtResource( 33 )]
+transform = Transform( 1.11839, 0, 1.65808, 0, 2, 0, -1.65808, 0, 1.11839, -40.5049, 1.20037, -19.5194 )
+
+[node name="debris4" parent="Graveyard/Map/Details2" instance=ExtResource( 33 )]
+transform = Transform( 1.11839, 0, 1.65808, 0, 2, 0, -1.65808, 0, 1.11839, -36.7907, 1.20037, -24.8234 )
+
+[node name="debris5" parent="Graveyard/Map/Details2" instance=ExtResource( 33 )]
+transform = Transform( 1.11839, 0, 1.65808, 0, 2, 0, -1.65808, 0, 1.11839, -25.9991, 1.40503, -25.7313 )
+
+[node name="Player" type="KinematicBody" parent="."]
+transform = Transform( 0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -10.1149, 0, -8.19971 )
+script = ExtResource( 1 )
+
+[node name="Body" type="CollisionShape" parent="Player"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.3, 0 )
+shape = SubResource( 3 )
+
+[node name="Feet" type="CollisionShape" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
+shape = SubResource( 4 )
+
+[node name="Pivot" type="Spatial" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="Camera" type="Camera" parent="Player/Pivot"]
+current = true
+
+[node name="SpotLight" type="SpotLight" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000364304, 1.89619, 2.28123 )
+light_color = Color( 0.933333, 0.956863, 0.529412, 1 )
+light_energy = 0.6
+light_indirect_energy = 0.87
+shadow_bias = 0.2
+spot_range = 11.6
+spot_angle = 37.9073
+
+[node name="Ground" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.745822, -0.71455, -25.1604 )
+material_override = SubResource( 5 )
+use_collision = true
+width = 45.0
+depth = 45.0
+material = SubResource( 6 )
+
+[node name="CSGBox" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03101, 1.09321, -1.07824 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGBox3" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.13589, 1.09321, -0.946663 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGBox4" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3012, 1.09321, -0.536837 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGBox9" type="CSGBox" parent="Ground"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -9.98111, 1.09321, -13.4316 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGBox5" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0021, 1.09321, 7.47043 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGBox6" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02902, 1.09321, 7.47043 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGBox7" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.917098, 1.09321, 6.03994 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGBox8" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84981, 1.09321, 6.2722 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGBox2" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1008, 1.09321, -1.49241 )
+operation = 2
+width = 1.9
+height = 2.182
+depth = 3.0
+
+[node name="CSGPolygon" type="CSGPolygon" parent="Ground"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 14.2949, 0.201247, -1.26224 )
+polygon = PoolVector2Array( -11.858, -1.078, -3.743, 2.068, 6.449, 1.543, 16.521, 0.286 )
+depth = 9.345
+smooth_faces = true
+material = SubResource( 7 )

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/stoneWallDamaged.obj-58bd9321cd892cb76ed4d698f8c516e9.mesh"
+
+[deps]
+
+files=[ "res://.import/stoneWallDamaged.obj-58bd9321cd892cb76ed4d698f8c516e9.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/stoneWallDamaged.obj"
+dest_files=[ "res://.import/stoneWallDamaged.obj-58bd9321cd892cb76ed4d698f8c516e9.mesh", "res://.import/stoneWallDamaged.obj-58bd9321cd892cb76ed4d698f8c516e9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

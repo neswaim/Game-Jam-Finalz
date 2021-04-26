@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gravestoneCross.obj-869ca2de52b94a3d9f91520915c2d581.mesh"
+
+[deps]
+
+files=[ "res://.import/gravestoneCross.obj-869ca2de52b94a3d9f91520915c2d581.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/gravestoneCross.obj"
+dest_files=[ "res://.import/gravestoneCross.obj-869ca2de52b94a3d9f91520915c2d581.mesh", "res://.import/gravestoneCross.obj-869ca2de52b94a3d9f91520915c2d581.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/crossWood.obj-5e0edafb7c62878ccff438d621512111.mesh"
+
+[deps]
+
+files=[ "res://.import/crossWood.obj-5e0edafb7c62878ccff438d621512111.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/crossWood.obj"
+dest_files=[ "res://.import/crossWood.obj-5e0edafb7c62878ccff438d621512111.mesh", "res://.import/crossWood.obj-5e0edafb7c62878ccff438d621512111.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

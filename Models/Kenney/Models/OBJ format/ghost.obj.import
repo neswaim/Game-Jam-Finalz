@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ghost.obj-48c916c70d5a33f9dc166f4fc95da591.mesh"
+
+[deps]
+
+files=[ "res://.import/ghost.obj-48c916c70d5a33f9dc166f4fc95da591.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/ghost.obj"
+dest_files=[ "res://.import/ghost.obj-48c916c70d5a33f9dc166f4fc95da591.mesh", "res://.import/ghost.obj-48c916c70d5a33f9dc166f4fc95da591.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

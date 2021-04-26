@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/urn.obj-910057d0434670e4415ff6db76d6893d.mesh"
+
+[deps]
+
+files=[ "res://.import/urn.obj-910057d0434670e4415ff6db76d6893d.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/urn.obj"
+dest_files=[ "res://.import/urn.obj-910057d0434670e4415ff6db76d6893d.mesh", "res://.import/urn.obj-910057d0434670e4415ff6db76d6893d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

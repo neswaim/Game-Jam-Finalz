@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/stoneWallCurve.obj-a79c8f974231c3a7f3215dce9936e413.mesh"
+
+[deps]
+
+files=[ "res://.import/stoneWallCurve.obj-a79c8f974231c3a7f3215dce9936e413.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/stoneWallCurve.obj"
+dest_files=[ "res://.import/stoneWallCurve.obj-a79c8f974231c3a7f3215dce9936e413.mesh", "res://.import/stoneWallCurve.obj-a79c8f974231c3a7f3215dce9936e413.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

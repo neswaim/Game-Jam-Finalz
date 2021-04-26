@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/graveBorder.obj-a043bc189526b3b11b3beb849bdf4d54.mesh"
+
+[deps]
+
+files=[ "res://.import/graveBorder.obj-a043bc189526b3b11b3beb849bdf4d54.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/graveBorder.obj"
+dest_files=[ "res://.import/graveBorder.obj-a043bc189526b3b11b3beb849bdf4d54.mesh", "res://.import/graveBorder.obj-a043bc189526b3b11b3beb849bdf4d54.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

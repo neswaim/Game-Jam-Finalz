@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/digger.obj-7134f922737e9208f9a026c9b9d54cfd.mesh"
+
+[deps]
+
+files=[ "res://.import/digger.obj-7134f922737e9208f9a026c9b9d54cfd.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/digger.obj"
+dest_files=[ "res://.import/digger.obj-7134f922737e9208f9a026c9b9d54cfd.mesh", "res://.import/digger.obj-7134f922737e9208f9a026c9b9d54cfd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

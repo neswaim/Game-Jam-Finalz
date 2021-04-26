@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/crypt.obj-f67d0e164586a50fb1305f060ba49f7a.mesh"
+
+[deps]
+
+files=[ "res://.import/crypt.obj-f67d0e164586a50fb1305f060ba49f7a.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/crypt.obj"
+dest_files=[ "res://.import/crypt.obj-f67d0e164586a50fb1305f060ba49f7a.mesh", "res://.import/crypt.obj-f67d0e164586a50fb1305f060ba49f7a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

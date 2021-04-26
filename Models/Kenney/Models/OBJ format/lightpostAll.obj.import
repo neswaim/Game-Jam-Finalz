@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lightpostAll.obj-85a0b9f5030f4f3fd24bfa763453e86b.mesh"
+
+[deps]
+
+files=[ "res://.import/lightpostAll.obj-85a0b9f5030f4f3fd24bfa763453e86b.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/lightpostAll.obj"
+dest_files=[ "res://.import/lightpostAll.obj-85a0b9f5030f4f3fd24bfa763453e86b.mesh", "res://.import/lightpostAll.obj-85a0b9f5030f4f3fd24bfa763453e86b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

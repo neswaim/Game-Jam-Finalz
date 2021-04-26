@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lightpostSingle.obj-49e7b2b01797bbde9117b69c576d16de.mesh"
+
+[deps]
+
+files=[ "res://.import/lightpostSingle.obj-49e7b2b01797bbde9117b69c576d16de.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/lightpostSingle.obj"
+dest_files=[ "res://.import/lightpostSingle.obj-49e7b2b01797bbde9117b69c576d16de.mesh", "res://.import/lightpostSingle.obj-49e7b2b01797bbde9117b69c576d16de.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gravestoneWide.obj-81c1e4df839973ae7571430b3bfc3895.mesh"
+
+[deps]
+
+files=[ "res://.import/gravestoneWide.obj-81c1e4df839973ae7571430b3bfc3895.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/gravestoneWide.obj"
+dest_files=[ "res://.import/gravestoneWide.obj-81c1e4df839973ae7571430b3bfc3895.mesh", "res://.import/gravestoneWide.obj-81c1e4df839973ae7571430b3bfc3895.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

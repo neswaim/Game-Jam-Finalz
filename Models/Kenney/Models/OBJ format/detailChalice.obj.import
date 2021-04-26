@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/detailChalice.obj-4c6d6425e901b555cc86078e6ba4b620.mesh"
+
+[deps]
+
+files=[ "res://.import/detailChalice.obj-4c6d6425e901b555cc86078e6ba4b620.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/detailChalice.obj"
+dest_files=[ "res://.import/detailChalice.obj-4c6d6425e901b555cc86078e6ba4b620.mesh", "res://.import/detailChalice.obj-4c6d6425e901b555cc86078e6ba4b620.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

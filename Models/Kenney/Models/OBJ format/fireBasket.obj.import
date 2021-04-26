@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/fireBasket.obj-ad2b8cb9b04d377bdba98489108f1e9d.mesh"
+
+[deps]
+
+files=[ "res://.import/fireBasket.obj-ad2b8cb9b04d377bdba98489108f1e9d.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/fireBasket.obj"
+dest_files=[ "res://.import/fireBasket.obj-ad2b8cb9b04d377bdba98489108f1e9d.mesh", "res://.import/fireBasket.obj-ad2b8cb9b04d377bdba98489108f1e9d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

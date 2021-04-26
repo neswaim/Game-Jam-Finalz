@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/shovelDirt.obj-90f51867e3339c738148b0ab8988f403.mesh"
+
+[deps]
+
+files=[ "res://.import/shovelDirt.obj-90f51867e3339c738148b0ab8988f403.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/shovelDirt.obj"
+dest_files=[ "res://.import/shovelDirt.obj-90f51867e3339c738148b0ab8988f403.mesh", "res://.import/shovelDirt.obj-90f51867e3339c738148b0ab8988f403.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

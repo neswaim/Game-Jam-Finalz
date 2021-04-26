@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/altarStone.obj-815105fc8adcf209ebb855cd345095e8.mesh"
+
+[deps]
+
+files=[ "res://.import/altarStone.obj-815105fc8adcf209ebb855cd345095e8.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/altarStone.obj"
+dest_files=[ "res://.import/altarStone.obj-815105fc8adcf209ebb855cd345095e8.mesh", "res://.import/altarStone.obj-815105fc8adcf209ebb855cd345095e8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

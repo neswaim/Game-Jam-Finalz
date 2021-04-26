@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lanternGlass.obj-b2fea53ec23f6dea5b77831facd5c2f6.mesh"
+
+[deps]
+
+files=[ "res://.import/lanternGlass.obj-b2fea53ec23f6dea5b77831facd5c2f6.mesh" ]
+
+source_file="res://Models/Kenney/Models/OBJ format/lanternGlass.obj"
+dest_files=[ "res://.import/lanternGlass.obj-b2fea53ec23f6dea5b77831facd5c2f6.mesh", "res://.import/lanternGlass.obj-b2fea53ec23f6dea5b77831facd5c2f6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
