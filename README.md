@@ -26,3 +26,5 @@ Nevaeh Swaim
 Map design, assisted with enemy script and pathing, created collisions on map, assisted with player script, found kenney resources.
 
 Nicholas Wrightsman
+
+Modeled Goodies (gems and gold bar), modeled "Zambie", assisted with Goodies pick up script, music and SFX, reveal trailer, HUD layout and script.
