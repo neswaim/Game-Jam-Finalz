@@ -1,4 +1,4 @@
-# Project Name
+# Grave Digger
 MSCH-C220 Game Jam, April 2021
 
 ## Theme
