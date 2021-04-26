@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Win.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/a-anak-cute-font/AnakCute-513pv.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/a-anak-cute-font/AnakCute-z8ynL.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="Win" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 422.409
+margin_top = 137.264
+margin_right = 472.409
+margin_bottom = 154.264
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 1 )
+text = "You win!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 179.957
+margin_top = 305.633
+margin_right = 350.957
+margin_bottom = 322.633
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 1 )
+text = "We hope to see you again soon..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 410.821
+margin_top = 453.475
+margin_right = 456.821
+margin_bottom = 476.475
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 2 )
+action_mode = 0
+text = "Leave"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
