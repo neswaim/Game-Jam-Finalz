@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/borderPillar.glb" type="PackedScene" id=2]
@@ -26,7 +26,7 @@
 [ext_resource path="res://Models/Kenney/Models/GLTF format/graveBorder.glb" type="PackedScene" id=24]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/coffinOld.glb" type="PackedScene" id=25]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/zombie.glb" type="PackedScene" id=26]
-[ext_resource path="res://Enemy/zambie.glb" type="PackedScene" id=27]
+[ext_resource path="res://Enemy/zambie.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/rocks.glb" type="PackedScene" id=28]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/debrisWood.glb" type="PackedScene" id=29]
 [ext_resource path="res://Models/Kenney/Models/GLTF format/trunkLong.glb" type="PackedScene" id=30]
@@ -48,12 +48,16 @@
 [ext_resource path="res://Sounds/coin.wav" type="AudioStream" id=46]
 [ext_resource path="res://Sounds/coin2.wav" type="AudioStream" id=47]
 [ext_resource path="res://GoldBar/GoldBar.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Enemy/zambie.gd" type="Script" id=49]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 2.49044, 4.86868 )
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 1.4, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.1, 0.2, 1.5 )
 
 [sub_resource type="CapsuleShape" id=3]
 radius = 0.5
@@ -69,52 +73,6 @@ albedo_color = Color( 0.352941, 0.482353, 0.380392, 1 )
 
 [sub_resource type="SpatialMaterial" id=7]
 
-[sub_resource type="VisualScriptFunction" id=8]
-resource_name = "new_function"
-
-[sub_resource type="VisualScript" id=9]
-data = {
-"base_type": "Spatial",
-"functions": [ {
-"data_connections": [  ],
-"function_id": -1,
-"name": "f_312843592",
-"nodes": [  ],
-"scroll": Vector2( 0, -217.75 ),
-"sequence_connections": [  ]
-}, {
-"data_connections": [  ],
-"function_id": 0,
-"name": "new_function",
-"nodes": [ 0, Vector2( 200, -60 ), SubResource( 8 ) ],
-"scroll": Vector2( -50, -100 ),
-"sequence_connections": [  ]
-} ],
-"is_tool_script": false,
-"signals": [ {
-"arguments": [  ],
-"name": "new_signal"
-} ],
-"variables": [ {
-"default_value": null,
-"export": false,
-"hint": 0,
-"hint_string": "",
-"name": "new_variable_2",
-"type": 0,
-"usage": 7
-}, {
-"default_value": null,
-"export": false,
-"hint": 0,
-"hint_string": "",
-"name": "new_variable",
-"type": 0,
-"usage": 7
-} ],
-"vs_unify": true
-}
-
 [sub_resource type="DynamicFont" id=10]
 size = 60
 outline_size = 2
@@ -124,6 +82,12 @@ extra_spacing_bottom = 3
 extra_spacing_char = 3
 extra_spacing_space = 3
 font_data = ExtResource( 41 )
+
+[sub_resource type="Curve3D" id=11]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -7.35944, -0.0271435, -34.0166, 0, 0, 0, 0, 0, 0, -6.79223, -0.0262232, -32.8657, 0, 0, 0, 0, 0, 0, -6.29213, -0.0276566, -31.1104, 0, 0, 0, 0, 0, 0, -5.98382, -0.0284214, -30.1796, 0, 0, 0, 0, 0, 0, -5.69241, -0.0293446, -29.0455, 0, 0, 0, 0, 0, 0, -5.34893, -0.030077, -28.1589, 0, 0, 0, 0, 0, 0, -4.90952, -0.0314789, -26.4379, 0, 0, 0, 0, 0, 0, -4.79395, -0.0325603, -25.0823, 0, 0, 0, 0, 0, 0, -5.02688, -0.0337048, -23.6061, 0, 0, 0, 0, 0, 0, -5.24154, -0.0349789, -21.971, 0, 0, 0, 0, 0, 0, -5.27578, -0.0361233, -20.5176, 0, 0, 0, 0, 0, 0, -5.0104, -0.0371418, -19.2597, 0, 0, 0, 0, 0, 0, -4.42049, -0.0361786, -17.9402, 0, 0, 0, 0, 0, 0, -3.93285, -0.0353489, -16.7723, 0, 0, 0, 0, 0, 0, -3.45576, -0.0347748, -16.1815, 0, 0, 0, 0, 0, 0, -2.02822, -0.0334034, -15.2195, 0, 0, 0, 0, 0, 0, -0.871352, -0.0325756, -15.0964, 0, 0, 0, 0, 0, 0, 0.319214, -0.0317135, -14.9516 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
 
 [node name="Game" type="Spatial"]
 
@@ -391,6 +355,178 @@ shape = SubResource( 2 )
 [node name="CollisionShape17" type="CollisionShape" parent="Graveyard/Collisions"]
 transform = Transform( 0.102606, 0, 1.87939, 0, 1, 0, -0.281908, 0, 0.68404, -12.4426, 1.75755, -15.221 )
 shape = SubResource( 2 )
+
+[node name="Graves" type="Spatial" parent="Graveyard"]
+
+[node name="StaticBody" type="StaticBody" parent="Graveyard/Graves"]
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="StaticBody4" type="StaticBody" parent="Graveyard/Graves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1019, 0, 1.51501 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody4"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody4"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody4"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody4"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="StaticBody5" type="StaticBody" parent="Graveyard/Graves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4166, 0, -6.48036 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody5"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody5"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody5"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody5"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="StaticBody6" type="StaticBody" parent="Graveyard/Graves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28452, 0, -6.92933 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody6"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody6"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody6"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody6"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="StaticBody7" type="StaticBody" parent="Graveyard/Graves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128084, 0, -7.0463 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody7"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody7"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody7"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody7"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="StaticBody8" type="StaticBody" parent="Graveyard/Graves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9804, 0, -7.40888 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody8"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody8"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody8"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody8"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="StaticBody9" type="StaticBody" parent="Graveyard/Graves"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3.70039, 0, -26.252 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody9"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody9"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody9"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody9"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="StaticBody3" type="StaticBody" parent="Graveyard/Graves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11564, 0, 1.52081 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody3"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody3"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody3"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody3"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2" type="StaticBody" parent="Graveyard/Graves"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75164, 0, 0.313646 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Graveyard/Graves/StaticBody2"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.30781, -4.6003 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Graveyard/Graves/StaticBody2"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, -1.67914, 1.19794, -6.04086 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Graveyard/Graves/StaticBody2"]
+transform = Transform( -1.62921e-07, 0, 0.7, 0, 3, 0, -1, 0, -1.14044e-07, -0.818351, 1.46486, -7.60138 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Graveyard/Graves/StaticBody2"]
+transform = Transform( 0.8, 0, 0, 0, 3, 0, 0, 0, 1, 0.272642, 1.1268, -6.04086 )
+shape = SubResource( 12 )
 
 [node name="Map" type="Spatial" parent="Graveyard"]
 
@@ -1627,16 +1763,6 @@ depth = 9.345
 smooth_faces = true
 material = SubResource( 7 )
 
-[node name="zambie" parent="." instance=ExtResource( 27 )]
-transform = Transform( 0.120645, 0, 1.09738, 0, 1.061, 0, -0.909029, 0, 0.145642, 9.06, -0.647, -8.084 )
-script = SubResource( 9 )
-
-[node name="OmniLight" type="OmniLight" parent="zambie"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.43307, 0 )
-light_color = Color( 0.823529, 0.898039, 0.737255, 1 )
-light_energy = 7.44
-omni_range = 1.41443
-
 [node name="HUD" type="Control" parent="."]
 margin_left = 6.71751
 margin_top = 7.07107
@@ -1705,3 +1831,13 @@ stream = ExtResource( 47 )
 
 [node name="GoldBar" parent="." instance=ExtResource( 48 )]
 transform = Transform( 0.978122, 0, -0.208031, 0, 1, 0, 0.208031, 0, 0.978122, -12.3879, -1.55754, -17.4077 )
+
+[node name="Path" type="Path" parent="."]
+curve = SubResource( 11 )
+
+[node name="PathFollow" type="PathFollow" parent="Path"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.10173, 0, -25.5065 )
+
+[node name="zambie" parent="Path/PathFollow" instance=ExtResource( 27 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, -0.247201, 2.58942 )
+script = ExtResource( 49 )
